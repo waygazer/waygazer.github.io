@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="PLRF Logo" className="h-10 w-10" />
+          <img src={logo} alt="PLRF Logo" className="h-10 w-10 rounded-full" />
           <div className="leading-tight">
             <span className="font-heading text-lg font-bold text-primary block">Powai Lake</span>
             <span className="text-xs text-muted-foreground tracking-wide">Rejuvenation Forum</span>
