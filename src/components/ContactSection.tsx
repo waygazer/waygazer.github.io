@@ -1,4 +1,4 @@
-import { Mail, MapPin, Globe } from "lucide-react";
+import { MapPin, Globe } from "lucide-react";
 
 const ContactSection = () => (
   <section id="contact" className="py-20 md:py-28 bg-background">
@@ -14,14 +14,7 @@ const ContactSection = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div className="bg-card rounded-xl p-8 shadow-card border border-border text-center">
-          <div className="w-14 h-14 rounded-full bg-lake-pale mx-auto flex items-center justify-center mb-4">
-            <Mail className="w-6 h-6 text-primary" />
-          </div>
-          <h3 className="font-heading text-lg font-semibold text-foreground mb-1">Write to Us</h3>
-          <p className="text-muted-foreground text-sm">info@powailake.in</p>
-        </div>
+      <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
         <div className="bg-card rounded-xl p-8 shadow-card border border-border text-center">
           <div className="w-14 h-14 rounded-full bg-lake-pale mx-auto flex items-center justify-center mb-4">
             <MapPin className="w-6 h-6 text-primary" />

@@ -13,7 +13,7 @@ const Footer = () => (
         </div>
         <div className="text-center md:text-right">
           <p className="text-lake-pale/70 text-xs">
-            Domain: powailake.in &middot; Supported by GreenYatra &amp; Partner Organizations
+            Domain: powailake.in &middot; Supported by Concerned Citizens
           </p>
           <p className="text-lake-pale/50 text-xs mt-1">
             &copy; {new Date().getFullYear()} Powai Lake Rejuvenation Forum. All rights reserved.
