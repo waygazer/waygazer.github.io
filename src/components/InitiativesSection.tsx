@@ -4,25 +4,21 @@ const initiatives = [
   {
     icon: FlaskConical,
     title: "Water & Silt Testing",
-    org: "GreenYatra",
     desc: "Comprehensive laboratory analysis of water samples and silt composition to build a scientific baseline for restoration decisions. Parameters include BOD, COD, dissolved oxygen, pH, heavy metals, and microbial load.",
   },
   {
     icon: MapPin,
     title: "GIS Data Mapping",
-    org: "GreenYatra",
     desc: "All analytical data values will be geo-referenced and placed on high-resolution GIS maps of the lake, enabling spatial visualization of pollution hotspots, silt distribution, and water quality gradients.",
   },
   {
     icon: Ruler,
     title: "Bathymetric Survey",
-    org: "GreenYatra",
     desc: "Detailed bathymetry to map the lake bed topography, measure water depths at hundreds of points, and quantify sediment accumulation — essential for planning targeted desilting operations.",
   },
   {
     icon: Leaf,
     title: "Biodiversity Census",
-    org: "Forum Partners",
     desc: "A comprehensive enumeration of the lake's aquatic ecosystem — cataloguing fish species, marsh crocodiles, migratory and resident birds, amphibians, insects, and aquatic plant communities.",
   },
 ];
@@ -48,10 +44,7 @@ const InitiativesSection = () => (
               <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center">
                 <item.icon className="w-6 h-6 text-gold" />
               </div>
-              <div>
-                <h3 className="font-heading text-xl font-semibold">{item.title}</h3>
-                <p className="text-gold-light text-xs tracking-wider uppercase">{item.org}</p>
-              </div>
+              <h3 className="font-heading text-xl font-semibold">{item.title}</h3>
             </div>
             <p className="text-lake-pale/80 text-sm leading-relaxed">{item.desc}</p>
           </div>
