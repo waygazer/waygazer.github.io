@@ -14,7 +14,7 @@ const HeroSection = () => (
 
     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
       <p className="animate-fade-up text-gold-light font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4">
-        Established under NGT Directive
+        A Citizen Scientists' Initiative
       </p>
       <h1 className="animate-fade-up-delay-1 font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground leading-tight mb-6">
         Powai Lake<br />

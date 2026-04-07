@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="PLRF Logo" className="h-10 w-10 brightness-200" loading="lazy" />
+          <img src={logo} alt="PLRF Logo" className="h-10 w-10 rounded-full brightness-200" loading="lazy" />
           <div>
             <p className="font-heading font-bold text-lg">Powai Lake Rejuvenation Forum</p>
             <p className="text-lake-pale/70 text-xs">Restoring Mumbai's Urban Oasis</p>
