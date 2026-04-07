@@ -44,10 +44,7 @@ const InitiativesSection = () => (
               <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center">
                 <item.icon className="w-6 h-6 text-gold" />
               </div>
-              <div>
-                <h3 className="font-heading text-xl font-semibold">{item.title}</h3>
-                <p className="text-gold-light text-xs tracking-wider uppercase">{item.org}</p>
-              </div>
+              <h3 className="font-heading text-xl font-semibold">{item.title}</h3>
             </div>
             <p className="text-lake-pale/80 text-sm leading-relaxed">{item.desc}</p>
           </div>
