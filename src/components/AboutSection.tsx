@@ -2,8 +2,8 @@ import { Droplets, Trees, Building2 } from "lucide-react";
 
 const stats = [
   { value: "2.34", unit: "km²", label: "Lake Area" },
-  { value: "80%", unit: "", label: "Surface covered by Water Hyacinth" },
-  { value: "10.9", unit: "MLD", label: "Untreated Sewage Inflow" },
+  { value: "30%", unit: "", label: "Surface covered by Water Hyacinth" },
+  { value: "18", unit: "MLD", label: "Untreated Sewage Inflow" },
   { value: "₹66", unit: "Cr", label: "BMC Restoration Budget" },
 ];
 
