@@ -28,9 +28,6 @@ const HeroSection = () => (
         <a href="#program" className="inline-block px-8 py-3 rounded-lg bg-gold text-accent-foreground font-semibold text-sm hover:brightness-110 transition-all shadow-elevated">
           Explore the 12-Point Program
         </a>
-        <a href="#donate" className="inline-block px-8 py-3 rounded-lg bg-primary-foreground text-primary font-semibold text-sm hover:brightness-110 transition-all shadow-elevated">
-          Donate
-        </a>
         <a href="#contact" className="inline-block px-8 py-3 rounded-lg border-2 border-primary-foreground/40 text-primary-foreground font-semibold text-sm hover:bg-primary-foreground/10 transition-all">
           Join the Movement
         </a>
