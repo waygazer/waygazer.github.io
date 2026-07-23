@@ -1,6 +1,6 @@
 import { MapPin, Globe, Heart, Copy, Check } from "lucide-react";
 import { useState } from "react";
-import qrPlaceholder from "@/assets/placeholder.svg";
+import qrPlaceholder from "/placeholder.svg";
 
 const ContactSection = () => {
   const [copied, setCopied] = useState(false);
