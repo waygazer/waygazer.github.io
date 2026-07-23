@@ -8,6 +8,7 @@ const navLinks = [
   { label: "12-Point Program", href: "#program" },
   { label: "Initiatives", href: "#initiatives" },
   { label: "News", href: "#news" },
+  { label: "Donate", href: "#donate" },
   { label: "Get Involved", href: "#contact" },
 ];
 
