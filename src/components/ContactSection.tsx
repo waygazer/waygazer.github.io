@@ -231,44 +231,6 @@ const ContactSection = () => {
             </p>
           </div>
 
-          {/* Divider */}
-          <div className="relative my-8">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-border" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-card px-3 text-xs text-muted-foreground uppercase tracking-wider">
-                Or pay via UPI directly
-              </span>
-            </div>
-          </div>
-
-          {/* UPI fallback */}
-          <div className="flex flex-col items-center gap-6">
-            <div className="bg-white rounded-xl p-4 shadow-soft border border-border">
-              <img
-                src={qrPlaceholder}
-                alt="UPI QR code placeholder for donating to Powai Lake Rejuvenation Forum"
-                className="w-40 h-40 md:w-48 md:h-48 object-contain"
-              />
-            </div>
-
-            <div className="w-full max-w-sm">
-              <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2 text-center">UPI ID</p>
-              <button
-                onClick={handleCopy}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border bg-muted hover:bg-muted/80 transition-colors"
-                aria-label="Copy UPI ID"
-              >
-                <span className="font-mono text-base md:text-lg text-foreground">{upiId}</span>
-                {copied ? <Check className="w-4 h-4 text-forest" /> : <Copy className="w-4 h-4 text-muted-foreground" />}
-              </button>
-              {copied && (
-                <p className="text-xs text-forest mt-2 text-center">UPI ID copied to clipboard</p>
-              )}
-            </div>
-          </div>
-
           <p className="text-xs text-muted-foreground mt-8 text-center">
             Supported by Concerned Citizens · Powai Lake Rejuvenation Forum
           </p>
