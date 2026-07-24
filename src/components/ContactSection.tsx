@@ -1,6 +1,5 @@
-import { MapPin, Globe, Heart, Copy, Check, CreditCard, Loader2 } from "lucide-react";
+import { MapPin, Globe, Heart, CreditCard, Loader2 } from "lucide-react";
 import { useState } from "react";
-import qrPlaceholder from "/placeholder.svg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -24,21 +23,9 @@ function loadRazorpayScript(): Promise<boolean> {
 }
 
 const ContactSection = () => {
-  const [copied, setCopied] = useState(false);
   const [amount, setAmount] = useState<number | "">(1000);
   const [donorName, setDonorName] = useState("");
   const [loading, setLoading] = useState(false);
-  const upiId = "powailake@upi";
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(upiId);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // ignore
-    }
-  };
 
   const handleDonate = async () => {
     const rupees = typeof amount === "number" ? amount : parseInt(String(amount), 10);
