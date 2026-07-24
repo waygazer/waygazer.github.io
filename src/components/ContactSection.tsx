@@ -34,7 +34,7 @@ const ContactSection = () => {
       return;
     }
     if (rupees > 100000) {
-      toast.error("Maximum online donation is ₹1,00,000. Use UPI for larger amounts.");
+      toast.error("Maximum online donation is ₹1,00,000.");
       return;
     }
 
@@ -56,7 +56,7 @@ const ContactSection = () => {
 
       if (error || !data?.order_id) {
         console.error("Order creation failed:", error, data);
-        toast.error("Could not initiate payment. Please try again or use UPI.");
+        toast.error("Could not initiate payment. Please try again.");
         return;
       }
 
