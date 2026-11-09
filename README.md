@@ -10,7 +10,7 @@ The single-page website for the Powai Lake Rejuvenation Forum, a citizen scienti
 Requires Node.js 22 or later.
 
 ```sh
-npm ci
+npm install
 cp .env.example .env
 npm run dev
 ```
@@ -20,7 +20,7 @@ Fill `.env` with the public browser configuration for the backend. Never commit 
 ## Production build
 
 ```sh
-npm ci
+npm install
 npm run build
 ```
 
