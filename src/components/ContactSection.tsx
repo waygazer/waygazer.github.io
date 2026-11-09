@@ -67,7 +67,7 @@ const ContactSection = () => {
         order_id: data.order_id,
         name: "Powai Lake Rejuvenation Forum",
         description: "Donation towards lake restoration",
-        image: "/placeholder.svg",
+        image: `${import.meta.env.BASE_URL}placeholder.svg`,
         prefill: donorName.trim() ? { name: donorName.trim() } : undefined,
         theme: { color: "#2e9985" },
         handler: async (response: {
