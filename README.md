@@ -1,26 +1,40 @@
-# Powai Lake Insights
+# Powai Lake Rejuvenation Forum
 
-I am a Director for Powai Lake Rejuvenation Forum. The NGT constituted a Joint Committee which suggested a 12 point program for Rejuvenation. GreenYatra is proposing to perform testing and analysis of water sample and silt composition. Data values are proposed to be placed on GIS maps of the Lake. Bathymetry is also proposed to be done so as to assess the water depths and sediment accumulation. We hope that these maps will help with desilting and improve water carrying capacity. Also, water hyacinth and other floating vegetation is to be removed. Sewage ingress into the Lake from all around the periphery is to be eliminated in dry weather. A Biodiversity census will also be undertaken for all flora and fauna in the aquatic ecosystem. Deep research the Internet and prepare a single page web application that I can deploy as a Forum website. The domain is powailake.in
+The single-page website for the Powai Lake Rejuvenation Forum, a citizen scientists' initiative supporting science-based restoration of Powai Lake, Mumbai.
 
-This project was built with [Lovable](https://lovable.dev).
+- Primary website: https://powailake.in
+- GitHub Pages mirror: https://clubtchief.github.io/waygazer.github.io/
 
-**Live app**: https://powai-watershed-whisperer.lovable.app
+## Local development
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/71e8481a-b233-434e-94f3-ad595eecdaa6).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires Node.js 22 or later.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm ci
+cp .env.example .env
 npm run dev
 ```
+
+Fill `.env` with the public browser configuration for the backend. Never commit `.env` or any Razorpay secret key.
+
+## Production build
+
+```sh
+npm ci
+npm run build
+```
+
+For the GitHub Pages subpath, set `VITE_BASE_PATH=/waygazer.github.io/` when building. The primary domain uses `VITE_BASE_PATH=/`.
+
+## GitHub Pages
+
+The workflow in `.github/workflows/deploy.yml` builds and deploys the site whenever `main` changes. It uses GitHub Actions as the Pages source and expects these repository variables:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_PUBLISHABLE_KEY`
+
+Razorpay order creation and payment verification remain in the existing backend functions under `supabase/functions/`; private Razorpay keys are stored only in backend secrets.
+
+## Built with Lovable
+
+Continue developing in the [Lovable editor](https://lovable.dev/projects/71e8481a-b233-434e-94f3-ad595eecdaa6).
