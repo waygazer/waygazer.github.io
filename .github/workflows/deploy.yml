@@ -18,12 +18,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VITE_BASE_PATH: /waygazer.github.io/
       VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
       VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Pick base path (root for <owner>.github.io repos, subpath otherwise)
+        run: |
+          OWNER="$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')"
+          REPO="$(echo '${{ github.event.repository.name }}' | tr '[:upper:]' '[:lower:]')"
+          if [ "$REPO" = "$OWNER.github.io" ]; then BASE="/"; else BASE="/${{ github.event.repository.name }}/"; fi
+          echo "VITE_BASE_PATH=$BASE" >> "$GITHUB_ENV"
+          echo "Using base path $BASE"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
