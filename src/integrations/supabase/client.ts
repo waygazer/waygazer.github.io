@@ -3,8 +3,10 @@ import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 import { brokeredPreviewStorage } from './previewAuthStorage';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// Keep the public landing page renderable if optional donation-service variables
+// are missing in a static deployment. Donation requests will fail until configured.
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://missing-supabase-config.invalid';
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || 'missing-supabase-publishable-key';
 
 
 function isNewSupabaseApiKey(value: string): boolean {
